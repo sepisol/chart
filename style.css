@@ -1,0 +1,162 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+
+html {
+  font-size: 16px;
+}
+
+body {
+  background-color: #fafafa;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.container {
+  background-color: #8891bf;
+  padding: 1.2rem 0.9rem 0.9rem 0.9rem;
+  width: 443px;
+  min-width: 443px;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  overflow: hidden;
+  border-radius: 4px;
+  box-shadow: 6px 6px 12px rgba(77, 77, 77, 0.4);
+}
+.container .column-chart {
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
+  height: 120px;
+}
+.container .column-chart .value {
+  height: 100%;
+  margin: 0 0.7rem;
+}
+.container .column-chart .value .month {
+  color: #fff;
+  opacity: 0.6;
+  margin-top: 0.5rem;
+}
+.container .column-chart .value .bar {
+  background-color: #fff;
+  opacity: 0.6;
+  width: 20px;
+  margin-left: 50%;
+  transform: translateX(-50%);
+  border-radius: 4px;
+}
+.container .column-chart .value.Jun .bar {
+  height: 80%;
+}
+.container .column-chart .value.Jul .bar {
+  height: 100%;
+}
+.container .column-chart .value.Aug .bar {
+  height: 50%;
+}
+.container .column-chart .value.Sep .bar {
+  height: 35%;
+}
+.container .column-chart .value.Oct .bar {
+  height: 60%;
+}
+.container .column-chart .value.Nov .bar {
+  background-color: #3730a3;
+  opacity: 1;
+  height: 75%;
+}
+.container .column-chart .value.Dec .bar {
+  height: 30%;
+}
+.container .column-chart .value.jan .bar {
+  height: 100%;
+}
+.container .column-chart .value.feb .bar {
+  height: 70%;
+}
+.container .column-chart .value.mar .bar {
+  height: 80%;
+}
+.container .bottom-chart {
+  margin-top: 5rem;
+  display: flex;
+}
+.container .bottom-chart .donut-chart {
+  flex-shrink: 0;
+  width: 130px;
+  height: 130px;
+  position: relative;
+  margin-right: 1.9rem;
+}
+.container .bottom-chart .donut-chart .total {
+  color: #fff;
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+  font-size: 0.81rem;
+  line-height: 17px;
+  width: 80%;
+}
+.container .bottom-chart .resume {
+  padding: 0.6rem 2rem 0.6rem 0;
+  width: 250px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  color: #fff;
+}
+.container .bottom-chart .resume .gray {
+  color: rgba(42, 42, 42, 0.6);
+}
+.container .bottom-chart .resume .light {
+  color: #fff;
+}
+.container .bottom-chart .resume .light:not(.no-m) {
+  margin-left: 0.6rem;
+}
+@media screen and (max-width: 450px) {
+  .container .bottom-chart .resume {
+    height: 150px;
+    width: unset;
+    align-items: center;
+    text-align: center;
+    padding: 0;
+  }
+  .container .bottom-chart .resume .no-m {
+    display: block;
+    margin-top: 0.2rem;
+  }
+  .container .bottom-chart .donut-chart .total {
+    width: 70px;
+  }
+  .container .bottom-chart .donut-chart {
+    width: 180px;
+    height: 180px;
+    margin-right: unset;
+    margin-bottom: 3rem;
+  }
+  .container .bottom-chart {
+    flex-direction: column;
+    align-items: center;
+    margin-top: 3rem;
+  }
+  .container .column-chart {
+    transform: scale(0.65);
+  }
+  .container {
+    width: 100%;
+    height: 100vh;
+    min-width: unset;
+    border-radius: unset;
+    padding: 4rem 1rem 2rem 1rem;
+  }
+}
